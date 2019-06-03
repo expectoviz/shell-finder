@@ -11,7 +11,7 @@ echo "
            Visit : https://cybergd-article.gq
           Bug? report email expectoviz@gmail.com
            "   
-wget  2>/dev/null; rm -rf root.txt.1 2>/dev/null
+wget https://gist.githubusercontent.com/expectoviz/f6721ace6ae01825c5e6b47c7ca57fa3/raw/001e3364ab19614980e0b8138b8a2927719b6f90/root.txt 2>/dev/null; rm -rf root.txt.1 2>/dev/null
 read -p "Masukan target: " target
 printf "\n"
   for i in `cat root.txt`
