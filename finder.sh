@@ -16,7 +16,7 @@ read -p "Masukan target: " target
 printf "\n"
   for i in `cat root.txt`
   do
-    curlvar=$(curl -s -o root.txt -w "%{http_code}" $target/$i)
+    curlvar=$(curl -s -o /dev/null -w "%{http_code}" $target/$i)
         if [ "$curlvar" = "201" ] || [ "$curlvar" = "302" ] || [ "$curlvar" = "301" ]
           then
           printf "[] Shell ditemukan : \e[01;32m $target/$i \n\e[0m"
