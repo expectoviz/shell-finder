@@ -22,6 +22,6 @@ printf "\n"
           printf "Shell ditemukan : \e[01;32m $target/$i \n\e[0m"
        break
             else
-          printf "\e[01;31m Tidak terdeteksi! \n\e[0m"
+          printf "\e[01;31mTidak terdeteksi! \n\e[0m"
           fi
        done
