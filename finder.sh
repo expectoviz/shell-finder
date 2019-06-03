@@ -17,7 +17,7 @@ printf "\n"
   for i in `cat root.txt`
   do
     curlvar=$(curl -s -o /dev/null -w "%{http_code}" $target/$i)
-        if [ "$curlvar" = "201" ] || [ "$curlvar" = "302" ] || [ "$curlvar" = "301" ]
+        if [ "$curlvar" = "301" ] || [ "$curlvar" = "302" ] || [ "$curlvar" = "201" ]
           then
           printf "[] Shell ditemukan : \e[01;32m $target/$i \n\e[0m"
        break
