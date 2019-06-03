@@ -11,7 +11,7 @@ echo "
            Visit : https://cybergd-article.gq
           Bug? report email expectoviz@gmail.com
            "   
-
+wget  2>/dev/null; rm -rf root.txt.1 2>/dev/null
 read -p "Masukan target: " target
 printf "\n"
   for i in `cat root.txt`
@@ -19,9 +19,9 @@ printf "\n"
     curlvar=$(curl -s -o root.txt -w "%{http_code}" $target/$i)
         if [ "$curlvar" = "201" ] || [ "$curlvar" = "302" ] || [ "$curlvar" = "301" ]
           then
-          printf "Shell ditemukan : \e[01;32m $target/$i \n\e[0m"
+          printf "[] Shell ditemukan : \e[01;32m $target/$i \n\e[0m"
        break
             else
-          printf "\e[01;31mTidak terdeteksi! \n\e[0m"
+          printf "\e[01;31m[] $target => Tidak terdeteksi! \n\e[0m"
           fi
        done
